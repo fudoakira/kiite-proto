@@ -1,24 +1,84 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Usersテーブル
 
-Things you may want to cover:
+|Column            |Type  |Options    |
+|------------------|------|-----------|
+|nickname          |string|null: false|
+|email             |string|null: false|
+|encrypted_password|string|null: false|
 
-* Ruby version
+### Association
+- has_many :messages
+- has_many :tag_users
+- has_many :tag, through: :tag_users
+- has_many :ratings
+- has_many :favorites
+- has_one :profile
 
-* System dependencies
+## Messagesテーブル
 
-* Configuration
+|Column |Type      |Options                       |
+|-------|----------|------------------------------|
+|content|text      |                              |
+|user   |references|null: false, foreign_key: true|
 
-* Database creation
+### Association
 
-* Database initialization
+- belongs_to :user
 
-* How to run the test suite
+## Tagsテーブル
 
-* Services (job queues, cache servers, search engines, etc.)
+|Column  |Type  |Options|
+|--------|------|-------|
+|tag_name|string|       |
 
-* Deployment instructions
+### Association
 
-* ...
+- has_many :tag_users
+- has_many :users, through: :tag_users
+
+## Tag_usersテーブル
+
+|Column|Type      |Options                       |
+|------|----------|------------------------------|
+|user  |references|null: false, foreign_key: true|
+|tag   |references|null: false, foreign_key: true|
+
+### Association
+
+- belongs_to :user
+- belongs_to :tag
+
+## Ratingsテーブル
+
+|Column|Type      |Options                       |
+|------|----------|------------------------------|
+|rate  |float     |null: false, default: 0       |
+|user  |references|null: false, foreign_key: true|
+
+### Association
+
+- belongs_to :user
+
+## Favoritesテーブル
+
+|Column|Type      |Options                       |
+|------|----------|------------------------------|
+|user  |references|null: false, foreign_key: true|
+
+### Association
+
+- belongs_to :user
+
+## Profilesテーブル
+
+|Column   |Type  |Options|
+|---------|------|-------|
+|content  |text  |       |
+|twitter  |string|       |
+|instagram|string|       |
+
+### Association
+
+- belongs_to :user
