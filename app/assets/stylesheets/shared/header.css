@@ -12,6 +12,7 @@
   width: 10vw;
   margin-right: 2vw;
 }
+
 .search-bar-contents {
   display: flex;
   justify-content: space-between;
@@ -53,7 +54,7 @@
 .lists-right {
   display: flex;
   list-style: none;
-  align-items: end;
+  margin-top: 40px;
   margin-left: 30vw;
 }
 
