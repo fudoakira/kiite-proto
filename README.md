@@ -4,7 +4,7 @@
 
 |Column            |Type  |Options    |
 |------------------|------|-----------|
-|nickname          |string|null: false|
+|name              |string|null: false|
 |email             |string|null: false|
 |encrypted_password|string|null: false|
 
@@ -73,11 +73,13 @@
 
 ## Profilesテーブル
 
-|Column   |Type  |Options|
-|---------|------|-------|
-|content  |text  |       |
-|twitter  |string|       |
-|instagram|string|       |
+|Column   |Type      |Options                       |
+|---------|----------|------------------------------|
+|nickname |string    |                              |
+|content  |text      |                              |
+|twitter  |string    |                              |
+|instagram|string    |                              |
+|user     |references|null: false, foreign_key: true|
 
 ### Association
 

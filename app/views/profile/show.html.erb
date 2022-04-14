@@ -1,0 +1,24 @@
+<%= render "shared/header" %>
+
+<div class='user-show'>
+  <div class='chat-start'>
+    <div class='chat-start-btn'>
+      <%= link_to "このユーザーと会話する！" ,class:"chat-start-red-btn" %>
+    </div>
+  </div>
+
+  <div class='user-profile'>
+    <%= image_tag class: :user_image %>
+    <p class='user-name'>遼太郎</p>
+    <p class='profile-comment'>初めまして、よろしくお願いします</p>
+    <div class='sns-link'>
+    </div>
+    <div class='tag-list'>
+    </div>
+    <div class='rating-star'>
+    </div>
+    <%= link_to "プロフィールの編集", , method: :get, class: "user-edit-btn" %>
+    <p class="or-text">or</p>
+    <%= link_to "削除", , method: :delete, class:"user-destroy" %>
+  </div>
+</div>

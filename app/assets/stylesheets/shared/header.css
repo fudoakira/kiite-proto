@@ -58,12 +58,11 @@
   margin-left: 30vw;
 }
 
-.user-nickname {
+.my-profile {
   text-decoration: none;
-  margin-right: 3vw;
+  margin-right: 1vw;
   line-height: 32px;
   color: #333333;
-  font-weight: bold;
 }
 
 
@@ -71,6 +70,7 @@
   text-decoration: none;
   color: #333333;
   line-height: 32px;
+  margin-left: 2vw;
 }
 
 .login {
