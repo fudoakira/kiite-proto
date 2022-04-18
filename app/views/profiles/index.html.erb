@@ -13,21 +13,28 @@
       <h2 class='login-user-title'>
         ログイン中ユーザー
       </h2>
-      <div class='user-wrapper'>
-        <%#= link_to image_tag(.image, class: :user_image) %>
-        <%= image_tag "IMG_5123.JPG", class: :user_image %>
-        <div class='user-body'>
-          <%#= link_to class: :header-comment %>
-          <p class='header-comment'>気軽にどうぞ</p>
-          <%#= link_to class: :user-name %>
-          <p class='user-name'>遼太郎</p>
-          <p class='rating-star'>
-            <%= image_tag "star-on.png" %>
-          </p>
-          <div class='tag-list'>
-            <p>仕事 なんでも</p>
+      <div class='user-list'>
+        <% @profiles.each do |profile| %>
+          <div class='user-wrapper'>
+            <%= link_to profile_path(profile.id) do %>
+              <%= image_tag profile.image.thumb50.url, class: :user_image %>
+              <div class='user-body'>
+                <div class='header_comment'>
+                  <%= profile.comment %>
+                </div>
+                <div class='user_name'>
+                  <%= profile.nickname %>
+                </div>
+                <p class='rating-star'>
+                  <%= image_tag "star-on.png" %>
+                </p>
+                <div class='tag-list'>
+                  <p>仕事 なんでも</p>
+                </div>
+              </div>
+            <% end %>
           </div>
-        </div>
+        <% end %>
       </div>
     </div>
 
