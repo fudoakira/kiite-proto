@@ -34,7 +34,10 @@ ActiveRecord::Schema.define(version: 2022_04_14_135940) do
   end
 
   create_table "profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "nickname"
+    t.string "image"
+    t.string "image_cache"
+    t.string "nickname", null: false
+    t.string "comment"
     t.text "content"
     t.string "twitter"
     t.string "instagram"

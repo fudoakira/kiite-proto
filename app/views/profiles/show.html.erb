@@ -1,0 +1,32 @@
+<%= render "shared/header" %>
+
+<div class='user-show'>
+  <div class='chat-start'>
+    <div class='chat-start-btn'>
+      <%= link_to "このユーザーと会話する！" ,class:"chat-start-red-btn" %>
+    </div>
+  </div>
+
+  <div class='user-profile'>
+    <%= image_tag @profile.image.thumb.url, class: :user_image %>
+    <p class='user-name'>
+    <%= @profile.nickname %>
+    </p>
+    <p class='profile-comment'>
+    <%= @profile.content %>
+    </p>
+    <div class='sns-link'>
+      <ul class="snsbtniti">
+        <li><a href="TwitterのプロフィールURL" class="flowbtn6 fl_tw1"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="インスタのプロフィールURL" class="flowbtn6 insta_btn6"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </div>
+    <div class='tag-list'>
+    </div>
+    <div class='rating-star'>
+    </div>
+    <%= link_to "プロフィールの編集", edit_profile_path(@profile.id), method: :get, class: "user-edit-btn" %>
+    <p class="or-text">or</p>
+    <%= link_to "削除", profile_path(@profile.id), method: :delete, class:"user-destroy" %>
+  </div>
+</div>
