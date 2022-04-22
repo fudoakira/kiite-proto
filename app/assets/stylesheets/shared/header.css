@@ -4,9 +4,13 @@
 
 .top-page-header {
   width: 100vw;
-  padding: 2vh 15vw;
+  padding: 2vh 2vw;
   display: flex;
-  flex-direction: column;
+}
+
+.logo-icon {
+  width: 10vw;
+  margin-right: 2vw;
 }
 
 .search-bar-contents {
@@ -15,13 +19,10 @@
   align-items: center;
 }
 
-
-
 .search-form {
-  width: 65vw;
+  width: 30vw;
   height: 5vh;
   display: flex;
-  margin-bottom: 5px;
 }
 
 .search-form>.input-box {
@@ -46,56 +47,41 @@
   font-size: 18px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   width: 100%;
   padding: 1vh 0;
-}
-
-.lists-left {
-  display: flex;
-  min-width: 200px;
-
-}
-
-.category-list {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
-}
-
-.brand-list {
-  text-decoration: none;
-  color: #333333;
 }
 
 .lists-right {
   display: flex;
   list-style: none;
-  align-items: flex-end;
+  margin-top: 40px;
+  margin-left: 30vw;
 }
 
-
-.user-nickname {
+.my-profile {
   text-decoration: none;
-  margin-right: 3vw;
+  margin-right: 1vw;
+  line-height: 32px;
   color: #333333;
-  font-weight: bold;
 }
 
 
 .logout {
   text-decoration: none;
   color: #333333;
+  line-height: 32px;
+  margin-left: 2vw;
 }
 
 .login {
   text-decoration: none;
   line-height: 32px;
-  margin-right: 3vw;
+  margin-right: 1vw;
   color: #333333;
 }
 
 .sign-up {
   text-decoration: none;
+  line-height: 32px;
   color: #333333;
 }
