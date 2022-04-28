@@ -14,16 +14,16 @@
         ログイン中ユーザー
       </h2>
       <div class='user-list'>
-        <% @profiles.each do |profile| %>
+        <% @users.each do |user| %>
           <div class='user-wrapper'>
-            <%= link_to profile_path(profile.id) do %>
-              <%= image_tag profile.image.thumb50.url, class: :user_image %>
+            <%= link_to user_path(user.id) do %>
+              <%= image_tag user.image.thumb50.url, class:"user_image" %>
               <div class='user-body'>
                 <div class='header_comment'>
-                  <%= profile.comment %>
+                  <%= user.comment %>
                 </div>
                 <div class='user_name'>
-                  <%= profile.nickname %>
+                  <%= user.nickname %>
                 </div>
                 <p class='rating-star'>
                   <%= image_tag "star-on.png" %>
